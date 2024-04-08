@@ -28,7 +28,7 @@ app.add_middleware(
 
 @app.get("/" , status_code=status.HTTP_302_FOUND)
 def welcomescreen():
-    return "welcome to the Interactive API!!!!"
+    return "welcome to the Interactive API :)"
 
 app.include_router(post.router)
 app.include_router(user.router)
