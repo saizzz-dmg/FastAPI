@@ -1,0 +1,8 @@
+{
+  "editor.inlineCompletionsAccessibilityVerbose": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "emmet.useInlineCompletions": true,
+  "editor.screenReaderAnnounceInlineSuggestion": false,
+  "emmet.showSuggestionsAsSnippets": true
+}
