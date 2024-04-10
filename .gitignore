@@ -2,3 +2,6 @@
 __pycache__
 venv/
 sample_codes.py
+calculations.py
+tests/
+

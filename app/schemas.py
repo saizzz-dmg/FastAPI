@@ -57,9 +57,8 @@ class Tokendata(BaseModel):
     id : Optional[str] = None
 
 class Token(BaseModel):
-    id : str
-    user_id : int
-    token_type : str = "Bearer"
+    access_token : str
+    token_type : str
 
 class Vote(BaseModel):
     post_id : int

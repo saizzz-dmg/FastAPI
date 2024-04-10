@@ -22,7 +22,8 @@ def login_validator(user_input : OAuth2PasswordRequestForm = Depends() , db: Ses
     access_token = oauth2.create_access_token(data = {'user_id' : user.id })
     # print(type(user.id))
     # return {"your access token : ": access_token , "token_type":"bearer"}
-    return {"id" : access_token ,"user_id" : user.id}
+    return {"access_token" : access_token ,"token_type" : "bearer"}
+
 
 
 
