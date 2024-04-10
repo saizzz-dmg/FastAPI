@@ -33,7 +33,7 @@ def create_user( user_prov : schemas.User ,db: Session = Depends(get_db)):
 
 
 @router.get("/{id}" , response_model= schemas.UserOut)
-def display_one_user( id : int , user_prov : schemas.verify_user , db: Session = Depends(get_db) ):
+def display_one_user( id : int , db: Session = Depends(get_db) ):
     user = db.query(model.User).filter(model.User.id == id).first()
     if not user:
         raise HTTPException(status_code=status.HTTP_203_NON_AUTHORITATIVE_INFORMATION , detail= "No user found")
