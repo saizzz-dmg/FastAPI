@@ -6,7 +6,6 @@ class posts(BaseModel):
     title : str
     post : bool = True
     content: str
-    user_id : int
 
 class Updateposts(posts):
     class Config:

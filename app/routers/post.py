@@ -14,7 +14,8 @@ router = APIRouter(
 @router.post("/" , status_code= status.HTTP_201_CREATED , response_model=schemas.displayPosts)
 def posting(sample_posts :schemas.posts , db: Session = Depends(get_db) , user_id : int  = Depends(oauth2.get_current_user)):
     
-
+    sample_posts = dict(sample_posts)
+    sample_posts['user_id'] = user_id
     cache =model.post(**dict(sample_posts))
     db.add(cache)
     db.commit()
