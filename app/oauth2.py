@@ -5,10 +5,6 @@ from fastapi.security import OAuth2PasswordBearer
 from fastapi import Depends , HTTPException , status
 from . import Config
 
-#SECRETKEY
-#ALOGORITHM
-#EXPIRATIONTIME
-
 SECRET_KEY = Config.settings.database_secretkey
 ALGORITHM = Config.settings.algorithm
 ACCESS_TOKEN_EXPIRE_MINUTES = Config.settings.SECRET_CODE_EXPIRATION_IN_MINUTES

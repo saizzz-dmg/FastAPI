@@ -37,12 +37,7 @@ def display_one_user( id : int , db: Session = Depends(get_db) ):
     user = db.query(model.User).filter(model.User.id == id).first()
     if not user:
         raise HTTPException(status_code=status.HTTP_203_NON_AUTHORITATIVE_INFORMATION , detail= "No user found")
-    # print(type(user))
-    # if utils.verify_password(user_prov.password , user.password):
-    return user
-    # else:
-        # raise HTTPException(status_code=status.HTTP_203_NON_AUTHORITATIVE_INFORMATION , detail= "incorrect password")
-        # return("the password is incorrect")
 
+    return user
 
 
